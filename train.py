@@ -88,7 +88,7 @@ if __name__ == "__main__":
     eval_period = 50
     num_workers = 2
     train_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_train.txt'
-    val_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_val.txtt'
+    val_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_val.txt'
 
     #   设置用到的显卡
     ngpus_per_node = torch.cuda.device_count()
