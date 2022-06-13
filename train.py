@@ -37,14 +37,14 @@ from utils.utils_fit import fit_one_epoch
    如果只是训练了几个Step是不会保存的，Epoch和Step的概念要捋清楚一下。
 '''
 if __name__ == "__main__":
-    Cuda = False
+    Cuda = True
     distributed = False
     sync_bn = False
     #   fp16        是否使用混合精度训练
     #               可减少约一半的显存、需要pytorch1.7.1以上
     fp16 = False
-    classes_path = 'F:/05-pycharm/02-net/model_data/classes.txt'
-    anchors_path = 'F:/05-pycharm/02-net/anchors/6anchors.txt'
+    classes_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/classes.txt'
+    anchors_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/kmeans.txt'
     anchors_mask = [[3, 4, 5], [0, 1, 2]]
     model_path = ''
     #   input_shape     输入的shape大小，一定要是32的倍数
@@ -54,7 +54,7 @@ if __name__ == "__main__":
     #                   convnext_small
     #                   swin_transfomer_tiny
     backbone = 'cspdarknet'
-    pretrained = False
+    pretrained = True
     phi = 's'  # 所使用的YoloV5的版本。s、m、l、x
     #   mosaic          马赛克数据增强
     #                   参考YoloX，由于Mosaic生成的训练图片，
@@ -87,8 +87,8 @@ if __name__ == "__main__":
     eval_flag = True
     eval_period = 10
     num_workers = 4
-    train_annotation_path = 'F:/05-pycharm/02-net/model_data/my_train.txt'
-    val_annotation_path = 'F:/05-pycharm/02-net/model_data/my_val.txt'
+    train_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_train.txt'
+    val_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_val.txtt'
 
     #   设置用到的显卡
     ngpus_per_node = torch.cuda.device_count()
