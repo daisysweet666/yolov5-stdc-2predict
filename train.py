@@ -75,7 +75,7 @@ if __name__ == "__main__":
     momentum = 0.937
     weight_decay = 0
     lr_decay_type = "cos"
-    save_period = 1
+    save_period = 25
     save_dir = 'logs'
     #   eval_flag       是否在训练时进行评估，评估对象为验证集
     #                   安装pycocotools库后，评估体验更佳。
@@ -85,8 +85,8 @@ if __name__ == "__main__":
     #   （一）此处获得的mAP为验证集的mAP。
     #   （二）此处设置评估参数较为保守，目的是加快评估速度。
     eval_flag = True
-    eval_period = 10
-    num_workers = 4
+    eval_period = 50
+    num_workers = 2
     train_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_train.txt'
     val_annotation_path = '/content/gdrive/MyDrive/Model/yolov5/model_data/my_val.txtt'
 
