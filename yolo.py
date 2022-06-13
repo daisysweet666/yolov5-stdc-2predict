@@ -18,8 +18,8 @@ from utils.utils_bbox import DecodeBox
 class YOLO(object):
     _defaults = {
         "model_path"        : '',
-        "classes_path"      : 'F:/05-pycharm/02-net/model_data/classes.txt',
-        "anchors_path"      : 'F:/05-pycharm/02-net/model_data/yolo_anchors.txt',
+        "classes_path"      : '/content/gdrive/MyDrive/Model/yolov5/model_data/classes.txt',
+        "anchors_path"      : '/content/gdrive/MyDrive/Model/yolov5/model_data/kmeans.txt',
         "anchors_mask"      : [[3, 4, 5], [0, 1, 2]],
         "input_shape"       : [640, 640],
         #------------------------------------------------------#
@@ -47,7 +47,7 @@ class YOLO(object):
         #   是否使用Cuda
         #   没有GPU可以设置成False
         #-------------------------------#
-        "cuda"              : False,
+        "cuda"              : True,
     }
 
     @classmethod
